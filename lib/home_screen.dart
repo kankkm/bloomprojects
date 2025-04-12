@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 200),
           child: CachedNetworkImage(
-            imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430293/f5_wxvgqk.png',
+            imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744441200/logo_pjwxys.png',
             fit: BoxFit.contain,
             width: 200,
             placeholder: (context, url) => CircularProgressIndicator(),
