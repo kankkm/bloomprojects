@@ -58,22 +58,25 @@ class _HomeScreenState extends State<HomeScreen> {
             PopupMenuItem(value: '1', child: Text('รายละเอียดโครงการ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '3', child: Text('นัดหมายเข้าชมโครงการ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '3', child: Text('จองวันนี้รับสิทธิพิเศษ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '4', child: Text('รูปบ้าน', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '4', child: Text('นัดหมายเข้าชมโครงการ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '5', child: Text('วีดิโอ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '5', child: Text('รูปบ้าน', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '6', child: Text('ความคืบหน้าโครงการ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '6', child: Text('วีดิโอ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '7', child: Text('แผนที่', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '7', child: Text('ความคืบหน้าโครงการ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '8', child: Text('ติดต่อเรา', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '8', child: Text('แผนที่', style: GoogleFonts.prompt(
+              fontSize: 16,
+            ),)),
+            PopupMenuItem(value: '9', child: Text('ติดต่อเรา', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
           ],
@@ -93,19 +96,20 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ScrollablePositionedList.builder(
         itemScrollController: _itemScrollController,
         itemPositionsListener: _itemPositionsListener,
-        itemCount: 10,
+        itemCount: 11,
         itemBuilder: (context, index) {
           switch (index) {
             case 0: return const FullScreenHero();
             case 1: return const PromotionSection();
             case 2: return const StuctureSection();
-            case 3: return const RegistrationForm();
-            case 4: return const ImageSlideshow();
-            case 5: return const VideoSection();
-            case 6: return const FeaturedProperties();
-            case 7: return const LocationMap();
-            case 8: return const ContactSection();
-            case 9: return Container( // Footer section
+            case 3: return const ProgressSection();
+            case 4: return const RegistrationForm();
+            case 5: return const ImageSlideshow();
+            case 6: return const VideoSection();
+            case 7: return const FeaturedProperties();
+            case 8: return const LocationMap();
+            case 9: return const ContactSection();
+            case 10: return Container( // Footer section
               padding: const EdgeInsets.all(20),
               color: const Color(0xFF22382C),
               child: const Center(

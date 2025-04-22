@@ -4,12 +4,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // For web platform views
 import 'package:flutter/services.dart';
 
 class VideoSection extends StatefulWidget {
   const VideoSection({super.key});
+
 
   @override
   State<VideoSection> createState() => _VideoSectionState();
@@ -24,7 +26,13 @@ class _VideoSectionState extends State<VideoSection> {
     super.initState();
     _setupVideoPlayer();
   }
-
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      print('Could not launch $url');
+    }
+  }
   void _setupVideoPlayer() {
     if (kIsWeb) {
       // Use a simpler approach with IFrameElement and DivElement
@@ -77,6 +85,26 @@ class _VideoSectionState extends State<VideoSection> {
             const Text('Video preview only available on web.'),
 
           const SizedBox(height: 0),
+          const SizedBox(height: 30),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF362E24),  // Updated color
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 30, vertical: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+            ),
+            onPressed: () => _launchURL('https://lin.ee/42jCoDx'),
+            child: const Text(
+              'ราคาบ้าน',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -88,6 +116,7 @@ class _VideoSectionState extends State<VideoSection> {
               ),
               textAlign: TextAlign.center,
             ).animate().fadeIn().slideY(),
+
           ),
         ],
       ),

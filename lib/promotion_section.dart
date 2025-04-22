@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PromotionSection extends StatelessWidget {
   const PromotionSection({super.key});
+
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      print('Could not launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +74,27 @@ class PromotionSection extends StatelessWidget {
                           style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                         ),
                         const SizedBox(height: 30),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF362E24),  // Updated color
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 15),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          onPressed: () => _launchURL('https://lin.ee/42jCoDx'),
+                          child: const Text(
+                            'ราคาบ้าน',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 30),
+
                       ],
                     ),
                   ),
@@ -122,6 +153,25 @@ class PromotionSection extends StatelessWidget {
                         style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                       ),
                       const SizedBox(height: 30),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF362E24),  // Updated color
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                        onPressed: () => _launchURL('https://lin.ee/42jCoDx'),
+                        child: const Text(
+                          'ราคาบ้าน',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
