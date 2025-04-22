@@ -41,7 +41,7 @@ class LocationMap extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: CachedNetworkImage(
-              imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
+              imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745289848/f23_mi2nvi.jpg',
               fit: BoxFit.cover,
               placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
               errorWidget: (context, url, error) => const Icon(Icons.error),
@@ -66,7 +66,7 @@ class LocationMap extends StatelessWidget {
                             ),
                             const SizedBox(height: 20),
                             Text(
-                              '3นาที ถึงโรงพยาบาลสว่างแดนดิน ใกล้ศูนย์ราชการ',
+                              '3นาที ถึงโรงพยาบาล สว่างแดนดิน ใกล้ศูนย์ราชการ',
                               style: GoogleFonts.prompt(
                                 color: const Color(0xFF362E24),  // Updated color
                                 fontSize: 16,
@@ -121,7 +121,7 @@ class LocationMap extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: CachedNetworkImage(
-                          imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430292/f4_nsndzx.jpg',
+                          imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745289848/f23_mi2nvi.jpg',
                           fit: BoxFit.cover,
                           placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
                           errorWidget: (context, url, error) => const Icon(Icons.error),
@@ -143,7 +143,7 @@ class LocationMap extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
                           Text(
-                            '3นาที ถึงโรงพยาบาลสว่างแดนดิน ใกล้ศูนย์ราชการ',
+                            '3นาที ถึงโรงพยาบาล สว่างแดนดิน ใกล้ศูนย์ราชการ',
                             style: GoogleFonts.prompt(
                               color: const Color(0xFF362E24),  // Updated color
                               fontSize: 16,

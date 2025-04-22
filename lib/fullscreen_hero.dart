@@ -97,27 +97,27 @@ class _HomeScreenState extends State<FullScreenHero> {
                       ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.1),
 
                       const SizedBox(height: 40),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF22382C),
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 32,
-                            vertical: 14,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                        ),
-                        onPressed: () => _launchURL('https://lin.ee/42jCoDx'),
-                        child: Text(
-                          'สอบถาม รายละเอียด',
-                          style: GoogleFonts.prompt(
-                            fontSize: isMobile ? 14 : 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ).animate().fadeIn(delay: 600.ms),
+                      //ElevatedButton(
+                       // style: ElevatedButton.styleFrom(
+                        //  backgroundColor: const Color(0xFF22382C),
+                        //  foregroundColor: Colors.white,
+                        //  padding: const EdgeInsets.symmetric(
+                          //  horizontal: 32,
+                          //  vertical: 14,
+                         // ),
+                        //  shape: RoundedRectangleBorder(
+                         //   borderRadius: BorderRadius.circular(30),
+                        //  ),
+                       // ),
+                       // onPressed: () => _launchURL('https://lin.ee/42jCoDx'),
+                       // child: Text(
+                         // 'สอบถาม รายละเอียด',
+                        //  style: GoogleFonts.prompt(
+                          //  fontSize: isMobile ? 14 : 16,
+                          //  fontWeight: FontWeight.bold,
+                         // ),
+                      //  ),
+                    //  ).animate().fadeIn(delay: 600.ms),
                       const SizedBox(height: 80),
                     ],
                   ),

@@ -33,21 +33,21 @@ class FeaturedProperties extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745290363/f25_owidbm.jpg',
+                      width: 400,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745290363/f24_qdu59p.jpg',
+                      width: 400,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                    CachedNetworkImage(
                       imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
-                      width: 400,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
-                    ),
-                    CachedNetworkImage(
-                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
-                      width: 400,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
-                    ),
-                    CachedNetworkImage(
-                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: 400,
                       fit: BoxFit.cover,
                       placeholder: (context, url) => const CircularProgressIndicator(),
@@ -59,23 +59,23 @@ class FeaturedProperties extends StatelessWidget {
                 return Column(
                   children: [
                     CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745290363/f25_owidbm.jpg',
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                    const SizedBox(height: 20),
+                    CachedNetworkImage(
+                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1745290363/f24_qdu59p.jpg',
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                    const SizedBox(height: 20),
+                    CachedNetworkImage(
                       imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f10_n2tzx9.jpg',
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
-                    ),
-                    const SizedBox(height: 20),
-                    CachedNetworkImage(
-                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430296/f21_ktyz0t.jpg',
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
-                    ),
-                    const SizedBox(height: 20),
-                    CachedNetworkImage(
-                      imageUrl: 'https://res.cloudinary.com/dsenp6ilm/image/upload/v1744430295/f22_qvspgc.jpg',
                       width: double.infinity,
                       fit: BoxFit.cover,
                       placeholder: (context, url) => const CircularProgressIndicator(),

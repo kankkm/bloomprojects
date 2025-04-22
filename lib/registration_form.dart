@@ -119,7 +119,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   TextFormField(
                     controller: _nameController,
                     decoration: const InputDecoration(
-                      labelText: 'ชื่อ-นามสกุล(จำเป็น)',
+                      labelText: 'ชื่อ-นามสกุล',
                       prefixIcon: Icon(Icons.person),
                     ),
                     validator: (value) {
@@ -133,7 +133,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   TextFormField(
                     controller: _emailController,
                     decoration: const InputDecoration(
-                      labelText: 'อีเมล (ถ้ามี)',
+                      labelText: 'อีเมล',
                       prefixIcon: Icon(Icons.email),
                     ),
                     validator: (value) {
