@@ -26,6 +26,11 @@ class MyApp extends StatelessWidget {
           surface: Color(0xFFDCD5CD),
           background: Color(0xFFDCD5CD),
         ),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Colors.white,
+          selectionColor: Colors.white24,
+          selectionHandleColor: Colors.white,
+        ),
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme.apply(
             bodyColor: Colors.white,
