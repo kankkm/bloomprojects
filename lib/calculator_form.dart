@@ -21,7 +21,12 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
   double? monthlyPayment;
   int? totalMonths;
 
-  // ฟังก์ชันฟอร์แมตตัวเลข
+  @override
+  void initState() {
+    super.initState();
+    housePriceController.text = formatNumber(2500000); // ตั้งค่าเริ่มต้นให้เป็น 2,500,000
+  }
+
   String formatNumber(double number) {
     final formatter = NumberFormat('#,##0', 'en_US');
     return formatter.format(number);
@@ -45,20 +50,6 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
         (1 - pow(1 + monthlyRate, -totalMonths!));
 
     setState(() {});
-  }
-
-  // Formatter แสดงคั่นหลักพันแบบไม่บังคับค่าเริ่มต้น
-  TextInputFormatter _currencyFormatter() {
-    return TextInputFormatter.withFunction((oldValue, newValue) {
-      final text = newValue.text.replaceAll(',', '');
-      if (text.isEmpty) return newValue.copyWith(text: '');
-
-      final formattedText = formatNumber(double.tryParse(text) ?? 0);
-      return TextEditingValue(
-        text: formattedText,
-        selection: TextSelection.collapsed(offset: formattedText.length),
-      );
-    });
   }
 
   @override
@@ -130,7 +121,7 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
                         borderSide: BorderSide(color: Colors.white),
                       ),
                     ),
-                    keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.numberWithOptions(decimal: true), // แก้ไขปัญหาปุ่มจุดทศนิยมหาย
                   ),
                   const SizedBox(height: 20),
                   DropdownButtonFormField<int>(
@@ -226,5 +217,19 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
         ],
       ),
     );
+  }
+
+  // Formatter แสดงคั่นหลักพันแบบไม่บังคับค่าเริ่มต้น
+  TextInputFormatter _currencyFormatter() {
+    return TextInputFormatter.withFunction((oldValue, newValue) {
+      final text = newValue.text.replaceAll(',', '');
+      if (text.isEmpty) return newValue.copyWith(text: '');
+
+      final formattedText = formatNumber(double.tryParse(text) ?? 0);
+      return TextEditingValue(
+        text: formattedText,
+        selection: TextSelection.collapsed(offset: formattedText.length),
+      );
+    });
   }
 }
