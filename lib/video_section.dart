@@ -83,8 +83,6 @@ class _VideoSectionState extends State<VideoSection> {
             )
           else
             const Text('Video preview only available on web.'),
-
-          const SizedBox(height: 0),
           const SizedBox(height: 30),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -104,19 +102,6 @@ class _VideoSectionState extends State<VideoSection> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              '',
-              style: GoogleFonts.prompt(
-                fontSize: 16,
-                color: const Color(0xFF22382C),
-              ),
-              textAlign: TextAlign.center,
-            ).animate().fadeIn().slideY(),
-
           ),
         ],
       ),

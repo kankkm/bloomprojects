@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:green_estate/calculator_form.dart';
 import 'package:green_estate/contact_section.dart';
 import 'package:green_estate/featured_properties.dart';
 import 'package:green_estate/fullscreen_hero.dart';
@@ -10,6 +11,7 @@ import 'package:green_estate/video_section.dart';
 import 'package:green_estate/progress_section.dart';
 import 'package:green_estate/image_slideshow.dart';
 import 'package:green_estate/structure_section.dart';
+import 'package:green_estate/calculator_form.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -61,22 +63,25 @@ class _HomeScreenState extends State<HomeScreen> {
             PopupMenuItem(value: '3', child: Text('จองวันนี้รับสิทธิพิเศษ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '4', child: Text('นัดหมายเข้าชมโครงการ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '4', child: Text('คำนวณยอดผ่อนต่อเดือน', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '5', child: Text('รูปบ้าน', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '5', child: Text('นัดหมายเข้าชมโครงการ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '6', child: Text('วีดิโอ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '6', child: Text('รูปบ้าน', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '7', child: Text('ความคืบหน้าโครงการ', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '7', child: Text('วีดิโอ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '8', child: Text('แผนที่', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '8', child: Text('ความคืบหน้าโครงการ', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
-            PopupMenuItem(value: '9', child: Text('ติดต่อเรา', style: GoogleFonts.prompt(
+            PopupMenuItem(value: '9', child: Text('แผนที่', style: GoogleFonts.prompt(
+              fontSize: 16,
+            ),)),
+            PopupMenuItem(value: '10', child: Text('ติดต่อเรา', style: GoogleFonts.prompt(
               fontSize: 16,
             ),)),
           ],
@@ -96,20 +101,21 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ScrollablePositionedList.builder(
         itemScrollController: _itemScrollController,
         itemPositionsListener: _itemPositionsListener,
-        itemCount: 11,
+        itemCount: 12,
         itemBuilder: (context, index) {
           switch (index) {
             case 0: return const FullScreenHero();
             case 1: return const PromotionSection();
             case 2: return const StuctureSection();
             case 3: return const ProgressSection();
-            case 4: return const RegistrationForm();
-            case 5: return const ImageSlideshow();
-            case 6: return const VideoSection();
-            case 7: return const FeaturedProperties();
-            case 8: return const LocationMap();
-            case 9: return const ContactSection();
-            case 10: return Container( // Footer section
+            case 4: return MortgageCalculatorForm();
+            case 5: return const RegistrationForm();
+            case 6: return const ImageSlideshow();
+            case 7: return const VideoSection();
+            case 8: return const FeaturedProperties();
+            case 9: return const LocationMap();
+            case 10: return const ContactSection();
+            case 11: return Container( // Footer section
               padding: const EdgeInsets.all(20),
               color: const Color(0xFF22382C),
               child: const Center(
