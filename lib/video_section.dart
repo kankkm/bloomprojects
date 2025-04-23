@@ -66,7 +66,7 @@ class _VideoSectionState extends State<VideoSection> {
       child: Column(
         children: [
           Text(
-            'วีดิโอ',
+            'วิดีโอ',
             style: GoogleFonts.prompt(
               color: const Color(0xFF22382C),
               fontSize: 32,
@@ -86,7 +86,7 @@ class _VideoSectionState extends State<VideoSection> {
           const SizedBox(height: 30),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF362E24),  // Updated color
+              backgroundColor: const Color(0xFF22382C),  // Updated color
               foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(
                   horizontal: 30, vertical: 15),

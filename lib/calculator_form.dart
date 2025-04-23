@@ -24,7 +24,7 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
   @override
   void initState() {
     super.initState();
-    housePriceController.text = formatNumber(2500000); // ตั้งค่าเริ่มต้นให้เป็น 2,500,000
+    housePriceController.text = formatNumber(2000000); // ตั้งค่าเริ่มต้นให้เป็น 2,000,000
   }
 
   String formatNumber(double number) {
