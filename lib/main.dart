@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BLOOM PROJECT',
+      title: 'BLOOM PROJECT บ้านเดี่ยวใกล้โรงพยาบาล สว่างแดนดิน',
       theme: ThemeData(
         primarySwatch: Colors.green,
         primaryColor: const Color(0xFF22382C),
