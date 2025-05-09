@@ -22,7 +22,7 @@ class FeaturedProperties extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           const Text(
-            'ตอกเสาเข็มเริ่มการก่อสร้าง 8 พฤษภาคม 2025',
+            'ตอกเสาเข็ม เริ่มการก่อสร้าง 8 พฤษภาคม 2025',
             style: TextStyle(fontSize: 16, color: const Color(0xFF22382C)),
           ),
           const SizedBox(height: 40),
