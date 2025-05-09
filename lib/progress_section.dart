@@ -105,7 +105,7 @@ class _HomeScreenState extends State<ProgressSection> {
                           style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                         ),
                         Text(
-                          '10. ประกันงานโครงสร้าง 5 ปี',
+                          '10. ประกันงานโครงสร้าง 10 ปี',
                           style: GoogleFonts.prompt(color: const Color(0xFF362E24),fontSize: 16),
                         ),
                         Text(
